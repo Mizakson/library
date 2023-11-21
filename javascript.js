@@ -41,21 +41,22 @@ function displayLibrary(arr) {
     }
 }
 
-displayLibrary(myLibrary);
+// displayLibrary(myLibrary);
 
 const addButton = document.querySelector('button');
 const addBookForm = document.querySelector('.book-form');
 
 /* hide add-form on page load */
-// window.onload=function() {
-//     document.getElementById('book-form').style.display="none";
-// }
+window.onload=function() {
+    document.getElementById('book-form').style.display="none";
+}
 
-// function buttonClick(a) {
-//     if (a === 1) {
-//         document.getElementById('book-form').style.display = "flex";
-//         document.getElementById('book-form').style.flexDirection = "column";
-//     } else {
-//         document.getElementById('book-form').style.display = "none";
-//     }
-// }
+function buttonClick(a) {
+    if (a === 1) {
+        document.getElementById('book-form').style.display = "flex";
+        document.getElementById('book-form').style.flexDirection = "column";
+        console.log('ADDING BOOK...')
+    } else {
+        document.getElementById('book-form').style.display = "none";
+    }
+}
