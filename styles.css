@@ -41,7 +41,7 @@ fieldset {
     background-color: black;
     color: white;
     border-radius: 10px;
-    padding: 10px;
+    padding: 20px;
 }
 
 input[type="text"] {
@@ -57,4 +57,24 @@ input[type="text"] {
 
 input {
     margin-top: 10px;
+}
+
+legend {
+    text-align: center;
+}
+
+#submit {
+    color: black;
+    background-color: white;
+    height: 40px;
+    width: 40px;
+    border-radius: 100px;
+    border: 2px solid white;
+    font-size: 2vh;
+}
+
+#submit-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
