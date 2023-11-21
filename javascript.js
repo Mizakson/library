@@ -49,6 +49,7 @@ const addBookForm = document.querySelector('.book-form');
 /* hide add-form on page load */
 window.onload=function() {
     document.getElementById('book-form').style.display="none";
+    console.log('LIBRARY OPENED...');
 }
 
 function buttonClick(a) {
@@ -60,3 +61,4 @@ function buttonClick(a) {
         document.getElementById('book-form').style.display = "none";
     }
 }
+
