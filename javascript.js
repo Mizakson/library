@@ -4,7 +4,7 @@ const myLibrary = [];
 function Book() {
     this.title = title;
     this.author = author;
-    this.read = true | false;
+    this.read = read;
     // this.info = function() {
     //     return `${title} by ${author}, ${read}`;
     // };
@@ -47,43 +47,38 @@ add status buttons later
 */
 
 /* define 2 default books */
-const defaultBook1 = {
-    title: 'The Hobbit',
-    author: 'J.R.R. Tolkien',
-    read: true
-}; 
+// const defaultBook1 = {
+//     title: 'The Hobbit',
+//     author: 'J.R.R. Tolkien',
+//     read: true
+// }; 
 
-const defaultBook2 = {
-    title: 'The War of the Worlds',
-    author: 'H.G. Wells',
-    read: false
-}
+// const defaultBook2 = {
+//     title: 'The War of the Worlds',
+//     author: 'H.G. Wells',
+//     read: false
+// }
 
 
-function addBookToLibrary(book) {
-    const bookTitle = document.getElementById('title').innerHTML;
-    const bookAuthor = document.getElementById('author').innerHTML;
-    // const bookRead = document.getElementById('yes').value;
-    // const bookNotRead = document.getElementById('no').value;
+function addBookToLibrary() {
+    
+    const bookTitle = document.getElementById('title').value;
+    const bookAuthor = document.getElementById('author').value;
+    
+    const bookRead = document.getElementById('yes').value;
+    const bookNotRead = document.getElementById('no').value;
 
-    book = new Book();
+    const book = new Book();
     book.title = bookTitle;
     book.author = bookAuthor;
-    
-    document.getElementById('yes').addEventListener('onclick', () => {
-        book.read = true;
-    })
 
-    document.getElementById('no').addEventListener('onclick', () => {
-        book.read = false;
-    })
 
-    myLibrary.push(book);
+    myLibrary.push();
 }
 
 /* add default books */
-addBookToLibrary(defaultBook1);
-addBookToLibrary(defaultBook2);
+// addBookToLibrary(defaultBook1);
+// addBookToLibrary(defaultBook2);
 
 /* iterate through array to display individual books */
 function displayLibrary(arr) {
@@ -94,3 +89,9 @@ function displayLibrary(arr) {
     }
 }
 
+const addBookButton = document.getElementById('submit');
+
+addBookButton.addEventListener('onclick', addBookToLibrary());
+
+
+console.log(displayLibrary(myLibrary));
