@@ -62,3 +62,16 @@ function buttonClick(a) {
     }
 }
 
+/* 
+thought process:
+
+1.
+on form submit, take user data and make it into a new object that has 
+Book as its prototype, push it to the array myLibrary
+
+2. 
+iterate through myLibrary to populate the table display
+
+add status buttons later
+
+*/
