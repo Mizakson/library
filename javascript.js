@@ -4,7 +4,7 @@ const myLibrary = [];
 function Book() {
     this.title = title;
     this.author = author;
-    this.read = read;
+    this.read = true | false;
     // this.info = function() {
     //     return `${title} by ${author}, ${read}`;
     // };
@@ -61,6 +61,23 @@ const defaultBook2 = {
 
 
 function addBookToLibrary(book) {
+    const bookTitle = document.getElementById('title').innerHTML;
+    const bookAuthor = document.getElementById('author').innerHTML;
+    // const bookRead = document.getElementById('yes').value;
+    // const bookNotRead = document.getElementById('no').value;
+
+    book = new Book();
+    book.title = bookTitle;
+    book.author = bookAuthor;
+    
+    document.getElementById('yes').addEventListener('onclick', () => {
+        book.read = true;
+    })
+
+    document.getElementById('no').addEventListener('onclick', () => {
+        book.read = false;
+    })
+
     myLibrary.push(book);
 }
 
@@ -76,3 +93,4 @@ function displayLibrary(arr) {
         i++;
     }
 }
+
