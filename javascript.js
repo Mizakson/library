@@ -10,41 +10,11 @@ function Book() {
     // };
 };
 
-/* define 2 default books */
-const defaultBook1 = {
-    title: 'The Hobbit',
-    author: 'J.R.R. Tolkien',
-    read: true
-}; 
-
-const defaultBook2 = {
-    title: 'The War of the Worlds',
-    author: 'H.G. Wells',
-    read: false
-}
-
-
-function addBookToLibrary(book) {
-    myLibrary.push(book);
-}
-
-/* add default books */
-addBookToLibrary(defaultBook1);
-addBookToLibrary(defaultBook2);
-
-/* iterate through array to display individual books */
-function displayLibrary(arr) {
-    let i = 0;
-    while (i < arr.length) {
-        console.log(arr[i]);
-        i++;
-    }
-}
-
 // displayLibrary(myLibrary);
 
 const addButton = document.querySelector('button');
 const addBookForm = document.querySelector('.book-form');
+const bookshelf = document.querySelector('table');
 
 /* hide add-form on page load */
 window.onload=function() {
@@ -75,3 +45,34 @@ iterate through myLibrary to populate the table display
 add status buttons later
 
 */
+
+/* define 2 default books */
+const defaultBook1 = {
+    title: 'The Hobbit',
+    author: 'J.R.R. Tolkien',
+    read: true
+}; 
+
+const defaultBook2 = {
+    title: 'The War of the Worlds',
+    author: 'H.G. Wells',
+    read: false
+}
+
+
+function addBookToLibrary(book) {
+    myLibrary.push(book);
+}
+
+/* add default books */
+addBookToLibrary(defaultBook1);
+addBookToLibrary(defaultBook2);
+
+/* iterate through array to display individual books */
+function displayLibrary(arr) {
+    let i = 0;
+    while (i < arr.length) {
+        console.log(arr[i]);
+        i++;
+    }
+}

@@ -125,10 +125,3 @@ th {
 th, td {
     border: 1px solid white;
 }
-
-.column-names {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
