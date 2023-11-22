@@ -113,11 +113,22 @@ legend {
 
 table {
     border: 2px solid white;
-    padding: 1vh;
+    padding: 3vh;
     border-radius: 5px;
 }
 
 th {
-    padding: 2vw;
+    padding: 1vw;
     text-decoration: underline;
+}
+
+th, td {
+    border: 1px solid white;
+}
+
+.column-names {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
