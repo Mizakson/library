@@ -110,3 +110,14 @@ legend {
     height: 512px;
     width: 900px;
 }
+
+table {
+    border: 2px solid white;
+    padding: 1vh;
+    border-radius: 5px;
+}
+
+th {
+    padding: 2vw;
+    text-decoration: underline;
+}
