@@ -11,3 +11,9 @@ body {
     padding: 50px;
 }
 
+.content {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    padding: 25px;
+}
