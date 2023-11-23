@@ -1,3 +1,5 @@
 /* 
 project refresh
 */
+
+const myLibrary = [];
