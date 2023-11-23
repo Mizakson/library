@@ -4,7 +4,7 @@ project refresh
 
 const myLibrary = [];
 
-function Book() {
+function Book(title, author, read) {
     this.title = title;
     this.author = author;
     this.read = read;
@@ -13,17 +13,8 @@ function Book() {
     };
 }
 
-const title = document.querySelector('#title');
-const author = document.querySelector('#author');
-const read = document.querySelector('#read');
-const bookshelf = document.querySelector('.bookshelf');
-const form = document.querySelector('form');
-
-const book = new Book(title.value, author.value, read.value);
-Object.setPrototypeOf(book, Book);
-
-function addBookToLibrary() {
-    
-}
-
-form.addEventListener('submit', addBookToLibrary());
+const $title = document.querySelector('#title');
+const $author = document.querySelector('#author');
+const $read = document.querySelector('#read');
+const $bookshelf = document.querySelector('.bookshelf');
+const $form = document.querySelector('form');
