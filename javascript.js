@@ -16,12 +16,3 @@ function Book(title, author, read) {
 const form = document.getElementById('form');
 const bookshelf = document.querySelector('.bookshelf');
 
-form.addEventListener('submit', function addBookToLibrary(e) {
-    e.preventDefault();
-    const data = new FormData(e.target);
-
-    const obj = Object.fromEntries(data.entries());
-    JSON.stringify(obj);
-    myLibrary.push(obj);
-    console.table(myLibrary);
-});
