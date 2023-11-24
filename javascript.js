@@ -13,8 +13,15 @@ function Book(title, author, read) {
     };
 }
 
-const $title = document.querySelector('#title');
-const $author = document.querySelector('#author');
-const $read = document.querySelector('#read');
-const $bookshelf = document.querySelector('.bookshelf');
-const $form = document.querySelector('form');
+const form = document.getElementById('form');
+const bookshelf = document.querySelector('.bookshelf');
+
+form.addEventListener('submit', function addBookToLibrary(e) {
+    e.preventDefault();
+    const data = new FormData(e.target);
+
+    const obj = Object.fromEntries(data.entries());
+    JSON.stringify(obj);
+    myLibrary.push(obj);
+    console.table(myLibrary);
+});
