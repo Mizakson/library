@@ -13,6 +13,12 @@ function Book(title, author, read) {
     };
 }
 
+const defBook1 = new Book('The War of the Worlds', 'H.G. Wells', 'no');
+const defBook2 = new Book('Lord of the Flies', 'William Golding', 'yes');
+
+myLibrary.push(defBook1);
+myLibrary.push(defBook2);
+
 const form = document.getElementById('form');
 const bookshelf = document.querySelector('.bookshelf');
 
