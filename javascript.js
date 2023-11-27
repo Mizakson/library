@@ -16,8 +16,11 @@ function Book(title, author, read) {
 const defBook1 = new Book('The War of the Worlds', 'H.G. Wells', 'no');
 const defBook2 = new Book('Lord of the Flies', 'William Golding', 'yes');
 
-myLibrary.push(defBook1.displayInfo());
-myLibrary.push(defBook2.displayInfo());
+myLibrary.push(defBook1);
+myLibrary.push(defBook2);
+
+Object.setPrototypeOf(defBook1, Book);
+Object.setPrototypeOf(defBook2, Book);
 
 const form = document.getElementById('form');
 const bookshelf = document.querySelector('.bookshelf');
@@ -36,7 +39,6 @@ nested loop
 lv 1 - to get the number of books in the array
 lv 2 - to get the number of properties in the obj (3)
 lv 3 - to get the value of each property in the obj
-
 
 */
 
