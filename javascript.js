@@ -26,6 +26,32 @@ const $author = document.getElementById('author');
 const $read = document.getElementById('read');
 const table = document.getElementById('books');
 
-console.log(defBook1.displayInfo());
-console.log(defBook2.displayInfo());
+/* 
+1. addBookToLibrary func
+take user input and store it into a new Book obj
+inside of myLibrary array
 
+2. loop through the array to populate table display
+nested loop
+lv 1 - to get the number of books in the array
+lv 2 - to get the number of properties in the obj (3)
+lv 3 - to get the value of each property in the obj
+
+
+*/
+
+const newBook = new Book();
+Object.setPrototypeOf(newBook, Book);
+
+function addBookToLibrary() {
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        newBook.title = $title.value;
+        newBook.author = $author.value;
+        newBook.read = $read.value;
+        myLibrary.push(newBook.displayInfo());
+        console.log(myLibrary);
+    })
+};
+
+addBookToLibrary();
