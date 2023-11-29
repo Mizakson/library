@@ -8,9 +8,9 @@ function Book(title, author, read) {
     this.title = title;
     this.author = author;
     this.read = read;
-    this.displayInfo = function() {
-        return `${this.title}, ${this.author}, ${this.read}`;
-    };
+    // this.displayInfo = function() {
+    //     return `${this.title}, ${this.author}, ${this.read}`;
+    // };
 }
 
 const defBook1 = new Book('The War of the Worlds', 'H.G. Wells', 'no');
@@ -29,18 +29,6 @@ const $author = document.getElementById('author');
 const $read = document.getElementById('read');
 const table = document.getElementById('books');
 
-/* 
-1. addBookToLibrary func
-take user input and store it into a new Book obj
-inside of myLibrary array
-
-2. loop through the array to populate table display
-nested loop
-lv 1 - to get the number of books in the array
-lv 2 - to get the number of properties in the obj (3)
-lv 3 - to get the value of each property in the obj
-
-*/
 
 const newBook = new Book();
 Object.setPrototypeOf(newBook, Book);
@@ -57,3 +45,20 @@ function addBookToLibrary() {
 };
 
 addBookToLibrary();
+
+function populateDisplay() {
+    for (var book of myLibrary) {
+        const row = document.createElement('tr');
+        for (var value in book) {
+            const cell = document.createElement('td');
+            cell.innerHTML = `${book[value]}`;
+            row.appendChild(cell);
+        }
+        table.appendChild(row);
+    }
+}
+
+window.onload(populateDisplay());
+
+
+// updateDisplay function here
