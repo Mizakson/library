@@ -33,18 +33,20 @@ const table = document.getElementById('books');
 const newBook = new Book();
 Object.setPrototypeOf(newBook, Book);
 
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    addBookToLibrary();
+    updateDisplay();
+});
+
+
 function addBookToLibrary() {
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
         newBook.title = $title.value;
         newBook.author = $author.value;
         newBook.read = $read.value;
-        myLibrary.push(newBook.displayInfo());
+        myLibrary.push(newBook);
         console.log(myLibrary);
-    })
 };
-
-addBookToLibrary();
 
 function populateDisplay() {
     for (var book of myLibrary) {
@@ -56,9 +58,20 @@ function populateDisplay() {
         }
         table.appendChild(row);
     }
-}
+};
 
-window.onload(populateDisplay());
+populateDisplay();
 
-
-// updateDisplay function here
+function updateDisplay() {
+    newVal = newBook;
+    const row = document.createElement('tr');
+    for (item in newBook) {
+        const cell = document.createElement('td');
+        newBook.title = $title.value;
+        newBook.author = $author.value;
+        newBook.read = $read.value;
+        cell.innerHTML = `${newVal[item]}`;
+        row.appendChild(cell);
+    }
+    table.appendChild(row);
+};
