@@ -71,3 +71,8 @@ tr, th, td {
 #books {
     border: 1px solid black;
 }
+
+tr > button {
+    padding: 10px;
+    margin: 5px;
+}
