@@ -37,6 +37,7 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
     addBookToLibrary();
     updateDisplay();
+    clearForm();
 });
 
 
@@ -48,6 +49,7 @@ function addBookToLibrary() {
         console.log(myLibrary);
 };
 
+// shows default data
 function populateDisplay() {
     for (var book of myLibrary) {
         const row = document.createElement('tr');
@@ -74,4 +76,10 @@ function updateDisplay() {
         row.appendChild(cell);
     }
     table.appendChild(row);
+};
+
+
+function clearForm() {
+    $title.value = '';
+    $author.value = '';
 };
