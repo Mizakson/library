@@ -30,6 +30,7 @@ const $read = document.getElementById('read');
 const table = document.getElementById('books');
 
 
+
 const newBook = new Book();
 Object.setPrototypeOf(newBook, Book);
 
@@ -58,7 +59,21 @@ function populateDisplay() {
             cell.innerHTML = `${book[value]}`;
             row.appendChild(cell);
         }
+        for (let i = 0; i < 1; i++) {
+            const btn = document.createElement('button');
+            btn.innerText = 'X';
+            btn.id = 'delete-btn';
+            row.appendChild(btn);
+        }
+        for (let i = 0; i < 1; i++) {
+            const btn = document.createElement('button');
+            btn.innerText = 'Read Status';
+            btn.id = 'read-status-btn';
+            row.appendChild(btn);
+        }
+
         table.appendChild(row);
+
     }
 };
 
