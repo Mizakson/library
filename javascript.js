@@ -90,6 +90,18 @@ function updateDisplay() {
         cell.innerHTML = `${newVal[item]}`;
         row.appendChild(cell);
     }
+    for (let i = 0; i < 1; i++) {
+        const btn = document.createElement('button');
+        btn.innerText = 'X';
+        btn.id = 'delete-btn';
+        row.appendChild(btn);
+    }
+    for (let i = 0; i < 1; i++) {
+        const btn = document.createElement('button');
+        btn.innerText = 'Read Status';
+        btn.id = 'read-status-btn';
+        row.appendChild(btn);
+    }
     table.appendChild(row);
 };
 
