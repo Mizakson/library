@@ -110,3 +110,10 @@ function clearForm() {
     $title.value = '';
     $author.value = '';
 };
+
+function deleteBook(element) {
+    const arr = myLibrary;
+    arr.splice(element, 1);
+    // return myLibrary;
+    console.log(myLibrary);
+}
