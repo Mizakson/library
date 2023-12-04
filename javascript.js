@@ -54,6 +54,7 @@ function addBookToLibrary() {
 function populateDisplay() {
     for (var book of myLibrary) {
         const row = document.createElement('tr');
+        row.id = 'book-data';
         for (var value in book) {
             const cell = document.createElement('td');
             cell.innerHTML = `${book[value]}`;
@@ -82,6 +83,7 @@ populateDisplay();
 function updateDisplay() {
     newVal = newBook;
     const row = document.createElement('tr');
+    row.id = 'book-data';
     for (item in newBook) {
         const cell = document.createElement('td');
         newBook.title = $title.value;
