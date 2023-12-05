@@ -39,12 +39,19 @@ function generateTable() {
     // column headers
     const row = document.createElement('tr');
     row.id = 'col-title'
-        
-    for (let i = 0; i < 3; i++) {
-        const newHeader = document.createElement('th');
-        newHeader.innerText = 'col names here';
-        row.appendChild(newHeader);
-    }
+            
+    const titleHeader = document.createElement('th');
+    titleHeader.innerText = 'Title';
+    row.appendChild(titleHeader);
+
+    const authorHeader = document.createElement('th');
+    authorHeader.innerText = 'Author';
+    row.appendChild(authorHeader);
+
+    const readHeader = document.createElement('th');
+    readHeader.innerText = 'Read Status';
+    row.appendChild(readHeader);
+
     table.appendChild(row);
 
         for (var book of myLibrary) {
@@ -141,4 +148,16 @@ function deleteBook(element) {
     arr.splice(element, 1);
     // return myLibrary;
     console.log(myLibrary);
+}
+
+function linkData() {
+    const bookEntry = document.getElementById('book-entry');
+    const tableBody = document.querySelector('tbody');
+
+    // for (bookEntry of tableBody) {
+    //     for (var book of myLibrary) {
+    //         bookEntry.setAttribute('indexNumber', `${myLibrary[book]}`);
+    //         console.log(bookEntry);
+    //     }
+    // }
 }
