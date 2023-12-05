@@ -11,7 +11,7 @@
         <h1>library</h1>
     </div>
     <button id="add-book">+</button>
-    <form id="add-book-form">
+    <form id="add-book-form" style="display: none;">
     <h2>enter book information below</h2>
         <fieldset>
             <label for="title">Title: </label>
@@ -22,7 +22,7 @@
             <input type="text" id="author" name="author" >
         </fieldset>
         <fieldset>
-            <label for="pages">Page No.</label>
+            <label for="pages">Pages: </label>
             <input type="number" id='pages' name="pages" min="1">
         </fieldset>
         <fieldset>
@@ -36,6 +36,9 @@
             <button type="submit" id="submit-book">Add To Library</button>
         </fieldset>
     </form>
+    <div class="display">
+        
+    </div>
 
 <script src="javascript.js"></script>
 </body>
