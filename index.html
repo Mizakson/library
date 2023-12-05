@@ -10,8 +10,33 @@
     <div class="title">
         <h1>library</h1>
     </div>
-    <button class="add-book">+</button>
+    <button id="add-book">+</button>
+    <form id="add-book-form">
+    <h2>enter book information below</h2>
+        <fieldset>
+            <label for="title">Title: </label>
+            <input type="text" id="title" name="title">
+        </fieldset>
+        <fieldset>
+            <label for="author">Author: </label>
+            <input type="text" id="author" name="author" >
+        </fieldset>
+        <fieldset>
+            <label for="pages">Page No.</label>
+            <input type="number" id='pages' name="pages" min="1">
+        </fieldset>
+        <fieldset>
+            <label for="read">Have you read this book? </label>
+            <select name="read" id="read">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <button type="submit" id="submit-book">Add To Library</button>
+        </fieldset>
+    </form>
 
-    <script src="javascript.js"></script>
+<script src="javascript.js"></script>
 </body>
 </html>
