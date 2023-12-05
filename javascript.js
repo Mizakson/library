@@ -26,4 +26,4 @@ Object.setPrototypeOf(defBook2, Book);
 function addBookToLibrary() {
     const newBook = new Book();
     Object.setPrototypeOf(newBook, Book);
-}
+};
