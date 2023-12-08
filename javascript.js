@@ -9,6 +9,9 @@ function Book(title, author, pages, read) {
     this.author = author;
     this.pages = pages;
     this.read = read;
+    this.displayInfo = function() {
+        return `${this.title} ${this.author} ${this.pages} ${this.read}`;
+    }
 }
 
 const defBook1 = new Book('The War of the Worlds', 'H.G. Wells', 231, 'no');
@@ -26,6 +29,29 @@ const $title = document.getElementById('title');
 const $author = document.getElementById('author');
 const $pages = document.getElementById('pages');
 const $read = document.getElementById('read');
+const display = document.querySelector('.display');
+
+
+function render() {
+    let bookDisplay = document.querySelector('.display');
+    bookDisplay.innerHTML = '';
+    for (let i = 0; i < myLibrary.length; i++) {
+        let book = myLibrary[i];
+        let bookEl = document.createElement('div');
+        bookEl.classList.toggle('card');
+        bookEl.innerHTML = `
+        <div class='card-header'>
+            <h3 class='title'>${book.title}</h3>
+            <h4 class='author'>${book.author}</h4>
+        </div>
+        <div class='card-body'>
+            <p>${book.pages}</p>
+            <p class='read-status'>${book.read}</p>
+        </div>
+        `;
+        bookDisplay.appendChild(bookEl);
+    }
+};
 
 
 function addBookToLibrary() {
@@ -37,23 +63,16 @@ function addBookToLibrary() {
     const newBook = new Book(title, author, pages, read);
     Object.setPrototypeOf(newBook, Book);
     myLibrary.push(newBook);
-    console.log(myLibrary);
-
+    render();
 };
 
-function clearForm() {
-    $title.value = '';
-    $author.value = '';
-    $pages.value = '';
-}
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
     addBookToLibrary();
-    clearForm();
-})
+});
 
 newBookBtn.addEventListener("click", function() {
     form.style.display = 'block';
     console.log('NEW BOOK FORM');
-})
+});
