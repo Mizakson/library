@@ -1,0 +1,10 @@
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+#add-book {
+    width: 2vw;
+    font-size: 2vh;
+}
