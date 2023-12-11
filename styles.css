@@ -8,3 +8,8 @@ body {
     width: 2vw;
     font-size: 2vh;
 }
+
+#add-book-form fieldset {
+    border-style: none;
+    margin-right: 2vw;
+}

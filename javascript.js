@@ -14,8 +14,17 @@ function Book(title, author, pages, read) {
     }
 }
 
-const defBook1 = new Book('The War of the Worlds', 'H.G. Wells', 231, 'no');
-const defBook2 = new Book('Lord of the Flies', 'William Golding', 315, 'yes');
+Book.constructor.prototype.toggleReadStatus = function() {
+    this.read = !this.read;
+};
+
+function toggleReadStatus(index) {
+    myLibrary[index].toggleReadStatus();
+    render();
+};
+
+const defBook1 = new Book('The War of the Worlds', 'H.G. Wells', 231, true);
+const defBook2 = new Book('Lord of the Flies', 'William Golding', 315, false);
 
 myLibrary.push(defBook1);
 myLibrary.push(defBook2);
@@ -46,7 +55,9 @@ function render() {
         </div>
         <div class='card-body'>
             <p>${book.pages}</p>
-            <p class='read-status'>${book.read}</p>
+            <p id='read-status'>${book.read ? "Read" : "Not Read"}</p>
+            <button class='del-btn' onclick="deleteBook(${i})">X</button>
+            <button class='toggle-btn' onclick="toggleReadStatus(${i})">Toggle</button>
         </div>
         `;
         bookDisplay.appendChild(bookEl);
@@ -58,7 +69,7 @@ function addBookToLibrary() {
     const title = $title.value;
     const author = $author.value;
     const pages = $pages.value
-    const read = $read.value;
+    const read = $read.checked;
     
     const newBook = new Book(title, author, pages, read);
     Object.setPrototypeOf(newBook, Book);
@@ -70,9 +81,21 @@ function addBookToLibrary() {
 form.addEventListener("submit", (e) => {
     e.preventDefault();
     addBookToLibrary();
+    clearForm();
 });
 
 newBookBtn.addEventListener("click", function() {
     form.style.display = 'block';
     console.log('NEW BOOK FORM');
 });
+
+function deleteBook(index) {
+    myLibrary.splice(index, 1);
+    render();
+}
+
+function clearForm() {
+    $title.value = '';
+    $author.value = '';
+    $pages.value = '';
+}
