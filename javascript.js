@@ -42,7 +42,7 @@ const display = document.querySelector('.display');
 
 
 function render() {
-    let bookDisplay = document.querySelector('.display');
+    let bookDisplay = document.querySelector('.shelf');
     bookDisplay.innerHTML = '';
     for (let i = 0; i < myLibrary.length; i++) {
         let book = myLibrary[i];
