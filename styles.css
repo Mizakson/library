@@ -5,6 +5,10 @@ body {
     font-family: 'Jost','Times New Roman', Times, serif;
 }
 
+button {
+    font-family: inherit;
+}
+
 #add-book {
     width: 2vw;
     font-size: 2vh;
