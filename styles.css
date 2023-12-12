@@ -26,3 +26,22 @@ button {
 #add-book-form input, #add-book-form button {
     margin-right: 1vw;
 }
+
+.shelf {
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+}
+
+.card {
+    width: 200px;
+    height: 220px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 1vh;
+}
+
+.card-header, .card-body {
+    text-align: center;
+}
+
