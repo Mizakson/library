@@ -14,7 +14,7 @@ button {
     font-size: 2vh;
 }
 
-#add-book-form fieldset {
+#add-book-form {
     border-style: none;
     margin-right: 2vw;
 }
