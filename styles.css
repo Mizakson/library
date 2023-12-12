@@ -18,3 +18,11 @@ button {
     border-style: none;
     margin-right: 2vw;
 }
+
+#add-book-form label {
+    padding-right: 5px;
+}
+
+#add-book-form input, #add-book-form button {
+    margin-right: 1vw;
+}
