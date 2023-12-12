@@ -2,6 +2,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 2vh;
+    font-family: 'Jost','Times New Roman', Times, serif;
 }
 
 #add-book {
