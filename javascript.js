@@ -50,8 +50,8 @@ function render() {
         bookEl.classList.toggle('card');
         bookEl.innerHTML = `
         <div class='card-header'>
-            <h3 class='title'>${book.title}</h3>
-            <h4 class='author'>${book.author}</h4>
+            <p class='title'>${book.title}</h3>
+            <p class='author'>${book.author}</h4>
         </div>
         <div class='card-body'>
             <p>${book.pages} Pages</p>
@@ -89,7 +89,7 @@ newBookBtn.addEventListener("click", function() {
     form.style.flexDirection = 'column';
     // form.style.justifyContent = 'center';
     // form.style.alignItems = 'center';
-    form.style.gap = '2vh';
+    form.style.gap = '1vh';
     console.log('NEW BOOK FORM');
 });
 

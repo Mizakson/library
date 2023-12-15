@@ -13,7 +13,7 @@ button {
 
 fieldset {
     border-style: none;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 #add-book-form {
@@ -34,5 +34,35 @@ label {
 
 .submit-btn-container {
     margin: 0 auto;
-    padding: 1vh;
+    padding-top: 2vh;
+}
+
+.display {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.shelf {
+    display: flex;
+    gap: 1vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    margin: 0 auto;
+    text-align: center;
+    width: 175px;
+    height: 200px; 
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px black;
+}
+
+.title, .author {
+    font-weight: bold;
 }
