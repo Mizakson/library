@@ -6,3 +6,29 @@ body {
     gap: 2vh;
     font-family: 'Jost','Times New Roman', Times, serif;
 }
+
+fieldset {
+    border-style: none;
+    margin-bottom: 10px;
+}
+
+#add-book-form {
+    display: flex;
+}
+
+label {
+    display: inline-block;
+    width: 90px;
+    text-align: center;
+}
+
+.read-status-container {
+    display: flex; 
+    justify-content: center;
+    gap: 2vw;
+}
+
+.submit-btn-container {
+    margin: 0 auto;
+    padding: 1vh;
+}

@@ -85,10 +85,11 @@ form.addEventListener("submit", (e) => {
 });
 
 newBookBtn.addEventListener("click", function() {
-    form.style.display = 'block';
-    // form.style.flexDirection = 'column';
+    form.style.display = 'flex';
+    form.style.flexDirection = 'column';
     // form.style.justifyContent = 'center';
     // form.style.alignItems = 'center';
+    form.style.gap = '2vh';
     console.log('NEW BOOK FORM');
 });
 
