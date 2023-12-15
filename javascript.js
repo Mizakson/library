@@ -86,6 +86,9 @@ form.addEventListener("submit", (e) => {
 
 newBookBtn.addEventListener("click", function() {
     form.style.display = 'block';
+    // form.style.flexDirection = 'column';
+    // form.style.justifyContent = 'center';
+    // form.style.alignItems = 'center';
     console.log('NEW BOOK FORM');
 });
 
