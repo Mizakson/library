@@ -1,6 +1,8 @@
 body {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 2vh;
     font-family: 'Jost','Times New Roman', Times, serif;
 }
@@ -16,8 +18,9 @@ button {
 
 #add-book-form {
     border-style: none;
-    margin-right: 2vw;
 }
+
+
 
 #add-book-form label {
     padding-right: 5px;
@@ -37,7 +40,7 @@ button {
     width: 200px;
     height: 220px;
     border: 1px solid black;
-    border-radius: 10px;
+    border-radius: 8px;
     padding: 1vh;
 }
 
@@ -45,3 +48,10 @@ button {
     text-align: center;
 }
 
+h3 {
+    text-align: center;
+}
+
+fieldset {
+    border-style: none;
+}
