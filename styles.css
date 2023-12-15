@@ -7,6 +7,10 @@ body {
     font-family: 'Jost','Times New Roman', Times, serif;
 }
 
+button {
+    font-family: inherit;
+}
+
 fieldset {
     border-style: none;
     margin-bottom: 10px;
