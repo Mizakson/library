@@ -56,7 +56,7 @@ function render() {
         <div class='card-body'>
             <p>${book.pages} Pages</p>
             <p id='read-status'>${book.read ? "Read" : "Not Read"}</p>
-            <button class='del-btn' onclick="deleteBook(${i})">X</button>
+            <button class='del-btn' onclick="deleteBook(${i})">x</button>
             <button class='toggle-btn' onclick="toggleReadStatus(${i})">Toggle</button>
         </div>
         `;

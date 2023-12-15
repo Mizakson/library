@@ -5,6 +5,8 @@ body {
     align-items: center;
     gap: 2vh;
     font-family: 'Jost','Times New Roman', Times, serif;
+    color: #00ff00;
+    background-color: black;
 }
 
 button {
@@ -57,12 +59,19 @@ label {
     text-align: center;
     width: 175px;
     height: 200px; 
-    border: 1px solid black;
+    border: 1px solid #5a5a5a;
     padding: 10px;
     border-radius: 10px;
-    box-shadow: 5px 5px black;
+    box-shadow: 5px 5px #5a5a5a;
 }
 
 .title, .author {
     font-weight: bold;
+}
+
+button, input {
+    border-color: #00ff00;
+    color: #00ff00;
+    background-color: black;
+    border-radius: 10px;
 }
