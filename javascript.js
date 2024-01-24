@@ -1,18 +1,21 @@
 /* 
-project refresh
+refactor Book constructor -> Book class
 */
 
 const myLibrary = [];
 
-function Book(title, author, pages, read) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-    this.displayInfo = function() {
+class Book {
+    constructor(title, author, pages, read) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+    }
+
+    displayInfo() {
         return `${this.title} ${this.author} ${this.pages} ${this.read}`;
     }
-}
+};
 
 Book.constructor.prototype.toggleReadStatus = function() {
     this.read = !this.read;
