@@ -15,6 +15,11 @@ class Book {
     displayInfo() {
         return `${this.title} ${this.author} ${this.pages} ${this.read}`;
     }
+
+    toggleReadStatus() {
+        this.read = !this.read;
+    }
+
 };
 
 Book.constructor.prototype.toggleReadStatus = function() {
