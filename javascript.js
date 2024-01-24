@@ -22,9 +22,9 @@ class Book {
 
 };
 
-Book.constructor.prototype.toggleReadStatus = function() {
-    this.read = !this.read;
-};
+// Book.constructor.prototype.toggleReadStatus = function() {
+//     this.read = !this.read;
+// };
 
 function toggleReadStatus(index) {
     myLibrary[index].toggleReadStatus();
