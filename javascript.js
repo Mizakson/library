@@ -16,29 +16,27 @@ class Book {
         return `${this.title} ${this.author} ${this.pages} ${this.read}`;
     }
 
-    toggleReadStatus() {
+    toggleRead() {
         this.read = !this.read;
     }
 
 };
 
-// Book.constructor.prototype.toggleReadStatus = function() {
-//     this.read = !this.read;
-// };
-
 function toggleReadStatus(index) {
-    myLibrary[index].toggleReadStatus();
+    myLibrary[index].toggleRead();
     render();
 };
 
 const defBook1 = new Book('The War of the Worlds', 'H.G. Wells', 231, true);
 const defBook2 = new Book('Lord of the Flies', 'William Golding', 315, false);
 
+Object.setPrototypeOf(defBook1, Book);
+Object.setPrototypeOf(defBook2, Book);
+
 myLibrary.push(defBook1);
 myLibrary.push(defBook2);
 
-Object.setPrototypeOf(defBook1, Book);
-Object.setPrototypeOf(defBook2, Book);
+
 
 const newBookBtn = document.getElementById('add-book');
 const form = document.querySelector('form');
@@ -64,12 +62,13 @@ function render() {
         <div class='card-body'>
             <p>${book.pages} Pages</p>
             <p id='read-status'>${book.read ? "Read" : "Not Read"}</p>
-            <button class='del-btn' onclick="deleteBook(${i})">x</button>
-            <button class='toggle-btn' onclick="toggleReadStatus(${i})">Toggle</button>
+            <button class='del-btn'>x</button>
+            <button class='toggle-btn'>Toggle</button>
         </div>
         `;
         bookDisplay.appendChild(bookEl);
     }
+    buttonEvents();
 };
 
 
@@ -110,4 +109,29 @@ function clearForm() {
     $title.value = '';
     $author.value = '';
     $pages.value = '';
+}
+
+
+function buttonEvents() {
+    const bookEls = Array.from(document.querySelector('.shelf').children);
+    console.log(bookEls);
+    bookEls.forEach(function(item, index) {
+        console.log(item,item.children,index);
+        const btnsArr = Array.from(item.children[1]);
+        let delBtn = btnsArr[2];
+        let toggleBtn = btnsArr[3];
+
+        delBtn.addEventListener(function(e) {
+            e.preventDefault();
+            deleteBook(index);
+            render();
+        })
+
+        toggleBtn.addEventListener(function(e) {
+            e.preventDefault();
+            toggleReadStatus(index);
+            render();
+        })
+
+    })
 }
